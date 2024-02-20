@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Quip Summary</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>3P DEA Weekly Reports</h1>
+  </header>
+  
+  <div id="content">
+    <!-- Content will be dynamically loaded here -->
+  </div>
+
+  <footer>
+    <p> Amazon Confidential </p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const quipContent = `
+      <section>
+          <h2>Week 1:</h2>
+          <div class="week-content">
+            <h3>ES Callouts (Owner: Alex)</h3>
+            <ul>
+              <li><strong>CORREOS EXP:</strong> Tue, Wed: 3PLs sent from BCN8 and BCN4 that did not connect in time. Carrier could not handle extra volume (3,5k misses).</li>
+              <li><strong>PAACK:</strong> Wed: Truck accident delayed Baleares volume. LM issues in Murcia and Jaen, caps requested at zip2 (0.8k misses).</li>
+              <li><strong>TOURLINE:</strong> Tue: Power outage on Mon afternoon (2-3h) caused delays in ES (2.4k misses) and PT (3k misses).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Week 2:</h2>
+          <div class="week-content">
+            <h3>ES Callouts (Owner: Alex)</h3>
+            <ul>
+              <li><strong>CORREOS EXP:</strong> Wed: Undocumented volume from BCN1 - 2,2k misses.</li>
+              <li><strong>TOURLINE:</strong> Overinjection in Ibiza due to missing caps - 1.6k on Mon and 0.8k on Tue.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Week 3:</h2>
+          <div class="week-content">
+            <h3>ES Callouts (Owner: Alex)</h3>
+            <ul>
+              <li><strong>CORREOS EXP:</strong> 
+                <ul>
+                  <li>Mon: Sorter breakdown in Getafe - Impact approx. 5.8k</li>
+                  <li>Mon and Tue: 4.2k from BCN8 due to 3PL raised without authorization and arrived at CC hub when it was closed.</li>
+                  <li>Thu: Safety issue with VRID from SVQ1 - Replacement was late past CIT time - 1.8k misses</li>
+                </ul>
+              </li>
+              <li><strong>PAACK:</strong> 
+                <ul>
+                  <li>Mon: Linehaul breakdown - VLC1 volume impacted - 0.2k misses</li>
+                  <li>Tue: Overinjection in Malaga - 5 zip5 with 95% of the volume (1.8k) - 0.6k misses</li>
+                  <li>Fri: MAD6 manifest not integrated - TBC with EDI team why manifest file was not sent to the carrier or integrated correctly</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Week 4:</h2>
+          <div class="week-content">
+            <h3>ES Callouts (Owner: Alex)</h3>
+            <ul>
+              <li><strong>CORREOS EXP:</strong> 
+                <ul>
+                  <li>Tue: Missort from Benavente hub impacting north of ES - 0.5k misses</li>
+                </ul>
+              </li>
+              <li><strong>CORREOS:</strong> 
+                <ul>
+                  <li>Mon: 2 linehaul accidents with destinations Barcelona and Aragon - 0.9k misses / Weather impact in Soria area</li>
+                </ul>
+              </li>
+              <li><strong>SEUR:</strong> 
+                <ul>
+                  <li>Mon: Linehaul accident impacting north of ES - 0.3k misses</li>
+                </ul>
+              </li>
+              <li><strong>TOURLINE:</strong> 
+                <ul>
+                  <li>Mon: Backlog in Baleares - 1k misses - Saturation in specific areas of the island - Backlog recovered on D+1</li>
+                  <li>Wed: Linehaul incident with ship to Baleares - 0.5k misses</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Week 5:</h2>
+          <div class="week-content">
+            <h3>ES Callouts (Owner: Alex)</h3> 
+            <ul>
+              <li><strong>SEUR:</strong> 
+                <ul>
+                  <li>Mon: MAD7 0,25k and 0,3k VLC1 - Linehaul incident</li>
+                </ul>
+              </li>
+            </ul>
+            <h3>PT Callouts (Owner: Alex)</h3>
+            <ul>
+              <li><strong>CTT:</strong> 
+                <ul>
+                  <li>Thu: Farmers strikes: impact TBD</li>
+                </ul>
+              </li>
+            </ul>
+            <h3>IE Callouts (Owner: Tru)</h3>
+            <ul>
+              <li><strong>UPS:</strong> 
+                <ul>
+                  <li>W-1 CC DEA (95.80%)Issues due to WK04 Storm in IE caused delays which built up backlog in WK05 for deliveries impacting service No actions, UPS were back on track backend of WK05 and have recovered. ETA W7</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Week 6:</h2>
+          <div class="week-content">
+            <h3>UK Callouts (Owner: Tru)</h3>
+            <ul>
+              <li><strong>ROYAL MAIL:</strong> 
+                <ul>
+                  <li>Main impacts due to issues at YDC, including under the roof failure, truck breakdown, and major RTC on the M1. Volume manually processed but recovered D+1.</li>
+                  <li>Nodes impacted: MME1, MME2, NCL1, NCL2, EMA4 (~12.5K Units).</li>
+                  <li>Monitoring continues into Week 7.</li>
+                </ul>
+              </li>
+              <li><strong>DPD UK:</strong> 97.90%</li>
+              <li><strong>JERSEY POST UK:</strong> 98.90%</li>
+              <li><strong>HERMES UK:</strong> 97.20%</li>
+              <li><strong>UPS:</strong> 99.60%</li>
+            </ul>
+            <h3>ES Callouts (Owner: Alex)</h3>
+            <ul>
+              <li><strong>CORREOS EXP:</strong> Farmers strike affecting ES network, tt pads and caps implemented. Mon: 4.4k misses due to 3PL sent to BCN hub during the weekend - Change request initiated.</li>
+              <li><strong>PAACK:</strong> Tue: Linehaul accident from Mad-Zgz - 0.6k misses</li>
+              <li><strong>TOURLINE:</strong> Mon: Linehaul delay due to road closure - 0.1k misses</li>
+            </ul>
+            <h3>PT Callouts (Owner: Alex)</h3>
+            <ul>
+              <li><strong>ALL CARRIERS:</strong> Farmers strike impacting all carriers, tt pads and caps implemented.</li>
+            </ul>
+            <h3>IE Callouts (Owner: Tru)</h3>
+            <ul>
+              <li><strong>ANPOST:</strong> 95.40%. Main impacts at YDC, volume recovered D+1.</li>
+              <li><strong>UPS:</strong> 95.10%. Feedback awaited from UPS INTL. Short-term TT pads arranged until improvements.</li>
+              <li><strong>DPD UK:</strong> 99.20%</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Week 7:</h2>
+          <div class="week-content">
+            <h3>UK Callouts (Owner: Tru)</h3>
+            <ul>
+              <li><strong>ROYAL MAIL:</strong> 
+                <ul>
+                  <li>EMA flight disruptions on 13th and 16th Feb, resource challenges at Fort William DO, vehicle breakdown from Midlands Superhub to Bristol, and SKY5 flight issues into Exeter and Isles of Scilly grounding due to fog on 14th Feb impacted operations.</li>
+                  <li>TT pads implemented from 17th to 19th Feb aided RM recovery without soft caps enforcement in WK07, with volume from EMA flights recovered via road on D+1.</li>
+                  <li>Monitoring continues into Week 8.</li>
+                </ul>
+              </li>
+            </ul>
+            <h3>NL Callouts (Owner: Ines)</h3>
+            <ul>
+              <li><strong>DHL NL:</strong></li>
+              <li>RC1: 113K37FSJ injected on Sunday resulted in 3k misses due to NDHZ scanning volume one day late on Monday, pending carrier investigation (60bps).</li>
+              <li>RC2: Monday EAD impacted regionally by Carnaval festivities and closures in some southern regions (15bps).</li>
+            </ul>
+            <h3>IE Callouts (Owner: Tru)</h3>
+            <ul>
+              <li><strong>ANPOST:</strong> Mainly attributable to AnPost HUB2 capacity concerns, with pallet stacking and mechanical issues affecting ZIP2s from 12th to 14th February.</li>
+              <li>AMZN escalated to AnPost team on 14th February due to the downward trend in WK07 and expressed concerns over their network operations.</li>
+            </ul>
+          </div>
+        </section>
+      `;
+
+      // Display the content function
+      function displayContent() {
+        const contentDiv = document.getElementById("content");
+        contentDiv.innerHTML = quipContent;
+      }
+
+      // Check if the user is already logged in (you can use more secure methods for production)
+      const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+      if (isLoggedIn) {
+        displayContent(); // Show content if the user is already logged in
+      } else {
+        // Redirect to the login page if the user is not logged in
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+</body>
+</html>
